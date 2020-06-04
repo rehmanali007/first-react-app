@@ -29,5 +29,8 @@ jobs:
     - name: Creating build for production deployment
       run: npm run build
       
+    - name: Install surge
+      run: npm i -g surge
+      
     - name: Deploying to surge
-      run: surge ./build --token ${{SURGE_TOKEN}}
+      run: surge ./build http://class2-assignment.surge.sh  --token ${{ secrets.SURGE_TOKEN }}
