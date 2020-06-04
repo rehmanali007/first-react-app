@@ -30,4 +30,4 @@ jobs:
       run: npm run build
       
     - name: Deploying to surge
-      run: surge ./build --token ${{SURGE_TOKEN}}
+      run: surge ./build http://class2-assignment.surge.sh  --token ${{SURGE_TOKEN}}
